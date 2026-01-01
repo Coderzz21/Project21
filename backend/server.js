@@ -11,6 +11,8 @@ require('dotenv').config();
 const app = express();
 const server = http.createServer(app);
 
+const backendURL = process.env.BACKEND_URL || "https://project21-1akh.onrender.com";
+
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:3000',
