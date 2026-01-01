@@ -14,8 +14,10 @@ const server = http.createServer(app);
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:3000',
+  'https://message-me11.vercel.app',
   process.env.FRONTEND_URL,
-  /\.onrender\.com$/
+  /\.onrender\.com$/,
+  /\.vercel\.app$/
 ];
 
 const io = new Server(server, {
