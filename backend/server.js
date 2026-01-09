@@ -251,6 +251,15 @@ io.on('connection', (socket) => {
       if (socketId === socket.id) {
         onlineUsers.delete(userId);
         io.emit('online_users', Array.from(onlineUsers.keys()));
+
+        // Update last seen timestamp
+        const users = readJSON(usersPath);
+        const userIndex = users.findIndex(u => u.id === userId);
+        if (userIndex !== -1) {
+          users[userIndex].lastSeen = new Date().toISOString();
+          writeJSON(usersPath, users);
+        }
+
         console.log(`User ${userId} went offline`);
         break;
       }
