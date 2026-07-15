@@ -1,16 +1,16 @@
 [
   {
     "id": "1",
-    "username": "suman",
-    "password": "ram1121",
-    "displayName": "SPG",
+    "username": "user1",
+    "password": "user1",
+    "displayName": "User1",
     "avatar": "👩"
   },
   {
     "id": "2",
-    "username": "user1",
-    "password": "user12345",
-    "displayName": "Suman Gan_ _",
+    "username": "user2",
+    "password": "user2",
+    "displayName": "User1",
     "avatar": "👨"
   }
 ]
